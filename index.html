@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="./Assets/titleLogo.png" />
+    <title>Rock? Paper? Scissors?</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!-- the game board, the size is equal to the screen size -->
+    <div id="board">
+      <!-- section for the enemy's hand -->
+      <div class="enemy">
+        <div class="card" id="rock"></div>
+        <div class="card" id="paper"></div>
+        <div class="card" id="scissors"></div>
+      </div>
+
+      <!-- section for the versus screen -->
+      <div class="versus">
+        <p>VERSUS</p>
+      </div>
+
+      <!-- section for the player's hand -->
+      <div class="player">
+        <div class="card" id="rock"></div>
+        <div class="card" id="paper"></div>
+        <div class="card" id="scissors"></div>
+      </div>
+    </div>
+    <div id="side">
+      <div id="enemy-status">
+        <div id="enemy-portrait"></div>
+        <div id="enemy-health">
+          <div id="enemy-health-bar">100</div>
+        </div>
+      </div>
+      <div id="player-status">
+        <div id="player-portrait"></div>
+        <div id="player-health">
+          <div id="player-health-bar">100</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

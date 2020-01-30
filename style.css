@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: aqua;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+#board {
+  background-color: darkblue;
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.enemy {
+  background-color: red;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  transform: rotate(180deg);
+}
+
+.player {
+  background-color: white;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.versus {
+  background-color: black;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding: 10px;
+  margin: 30px 10px 30px;
+  background-color: white;
+  border: black solid 10px;
+  width: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* size is 480 x 750 */
+}
+
+.versus {
+  font-size: 75px;
+  color: white;
+}
+
+.enemy #rock {
+  background-image: url(./Assets/enemyRock.jpg);
+}
+
+.enemy #paper {
+  background-image: url(./Assets/enemyPaper.jpg);
+}
+
+.enemy #scissors {
+  background-image: url(./Assets/enemyScissors.jpg);
+}
+
+.player #rock {
+  background-image: url(./Assets/playerRock.jpg);
+}
+
+.player #paper {
+  background-image: url(./Assets/playerPaper.jpg);
+}
+
+.player #scissors {
+  background-image: url(./Assets/playerScissors.jpg);
+}
+
+/* side bar */
+
+#side {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#enemy-status {
+  background-color: maroon;
+  padding: 20px;
+  height: 50%;
+}
+
+#player-status {
+  background-color:cyan;
+  padding: 20px;
+  height: 50%;
+}
+
+#enemy-portrait {
+  background-image: url(./Assets/akuma.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  height: 70%;
+}
+
+#enemy-health {
+  display: flex;
+  background-color: black;
+  height: 30%;
+  align-items: center;
+  justify-content: center;
+}
+
+#enemy-health-bar {
+  background-color: red;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 75px;
+  font-weight: 700;
+}
+
+#player-portrait {
+  background-image: url(./Assets/ryuu.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  height: 70%;
+}
+
+#player-health {
+  background-color: black;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#player-health-bar {
+  background-color: lightgreen;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 75px;
+  font-weight: 700;
+}
