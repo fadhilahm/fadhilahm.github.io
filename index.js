@@ -184,22 +184,28 @@ let enemyScissors = document.getElementById("enemy-scissors");
 function opponentHand() {
   switch (opponentChoice) {
     case "rock":
-      enemyRock.style.transform = "scale(1.2)";
+      enemyRock.style.backgroundImage = "url(./Assets/enemyRock.jpg)";
+      enemyRock.style.transform = "rotate(180deg)";
       break;
     case "paper":
-      enemyPaper.style.transform = "scale(1.2)";
+      enemyPaper.style.backgroundImage = "url(./Assets/enemyPaper.jpg)";
+      enemyPaper.style.transform = "rotate(180deg)";
       break;
     case "scissors":
-      enemyScissors.style.transform = "scale(1.2)";
+      enemyScissors.style.backgroundImage = "url(./Assets/enemyScissors.jpg)";
+      enemyScissors.style.transform = "rotate(180deg)";
       break;
   }
 }
 
 // function to turn back the size of opponent's hand to normal
 function opponentHandReturn() {
-  enemyRock.style.transform = "scale(1)";
-  enemyPaper.style.transform = "scale(1)";
-  enemyScissors.style.transform = "scale(1)";
+  enemyRock.style.backgroundImage = "url(./Assets/questionMark.png)";
+  enemyRock.style.transform = "rotate(0deg)";
+  enemyPaper.style.backgroundImage = "url(./Assets/questionMark.png)";
+  enemyPaper.style.transform = "rotate(0deg)";
+  enemyScissors.style.backgroundImage = "url(./Assets/questionMark.png)";
+  enemyScissors.style.transform = "rotate(0deg)";
 }
 
 // function to show hit effect
@@ -232,4 +238,11 @@ function hurt() {
         document.getElementById("enemy-shield").style.visibility = "hidden";
       }, 250);
   }
+}
+
+// function to hide opponent's card
+function questionMark (){
+  enemyRock.style.backgroundImage = "url(./Assets/questionMark.png);"
+  enemyPaper.style.backgroundImage = "url(./Assets/questionMark.png);"
+  enemyScissors.style.backgroundImage = "url(./Assets/questionMark.png);"
 }
