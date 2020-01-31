@@ -40,7 +40,6 @@ body {
   justify-content: space-evenly;
 }
 
-
 .card {
   padding: 10px;
   margin: 30px 10px 30px;
@@ -108,7 +107,7 @@ body {
 }
 
 #player-status {
-  background-color:cyan;
+  background-color: cyan;
   padding: 20px;
   height: 50%;
 }
@@ -129,18 +128,31 @@ body {
   background-color: black;
   height: 30%;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 50px;
+  position: relative;
 }
 
 #enemy-health-bar {
   background-color: red;
   height: 80%;
-  width: 80%;
+  width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 75px;
   font-weight: 700;
+}
+
+#enemy-health-bar p {
+  z-index: 20;
+}
+
+#enemy-floating-health {
+  position: absolute;
+  background-color: lightgreen;
+  width: 400px;
+  height: 80%;
 }
 
 #player-portrait {
@@ -155,17 +167,19 @@ body {
 }
 
 #player-health {
+  display: flex;
   background-color: black;
   height: 30%;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 50px;
+  position: relative;
 }
 
 #player-health-bar {
-  background-color: lightgreen;
+  background-color: red;
   height: 80%;
-  width: 80%;
+  width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,7 +187,18 @@ body {
   font-weight: 700;
 }
 
-#enemy-hit{
+#player-floating-health {
+  position: absolute;
+  background-color: lightgreen;
+  width: 400px;
+  height: 80%;
+}
+
+#player-health-bar p {
+  z-index: 20;
+}
+
+#enemy-hit {
   background-color: red;
   height: 40%;
   width: 40%;
@@ -184,7 +209,7 @@ body {
   border: yellow solid 10px;
 }
 
-#player-hit{
+#player-hit {
   background-color: red;
   height: 40%;
   width: 40%;

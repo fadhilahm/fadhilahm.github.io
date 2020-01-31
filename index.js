@@ -15,8 +15,13 @@ let opponentChoice = opponentMovesList[Math.floor(Math.random() * 3)];
 // select one of the cards
 let playerChoice = null;
 let result = null;
-let playerHealth = document.getElementById("player-health-bar");
-let enemyHealth = document.getElementById("enemy-health-bar");
+let playerHealth = document
+  .getElementById("player-health-bar")
+  .getElementsByTagName("p")[0];
+
+let enemyHealth = document
+  .getElementById("enemy-health-bar")
+  .getElementsByTagName("p")[0];
 
 let playerRock = document.getElementById("player-rock");
 playerRock.addEventListener("click", function() {
@@ -103,13 +108,19 @@ function winorlose(playerChoice, opponentChoice) {
 }
 
 // function to reduce health
+let enemyTimesHit = 0;
+let playerTimesHit = 0;
 function healthCalc(result) {
   switch (result) {
     case "win":
       enemyHealth.innerHTML -= 10;
+      enemyTimesHit++;
+      document.getElementById("enemy-floating-health").style.width = (400 - (enemyTimesHit*40)) + "px";
       break;
     case "lose":
       playerHealth.innerHTML -= 10;
+      playerTimesHit++;
+      document.getElementById("player-floating-health").style.width = (400 - (playerTimesHit*40)) + "px";
       break;
     default:
       break;
