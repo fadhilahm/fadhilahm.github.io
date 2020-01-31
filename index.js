@@ -25,6 +25,8 @@ let enemyHealth = document
 
 let playerRock = document.getElementById("player-rock");
 playerRock.addEventListener("click", function() {
+  document.getElementById("enemy-status").style.animationPlayState = "paused";
+  document.getElementById("player-status").style.animationPlayState = "paused";
   opponentHandReturn();
   playerChoice = "rock";
   result = winorlose(playerChoice, opponentChoice);
@@ -37,6 +39,8 @@ playerRock.addEventListener("click", function() {
 });
 let playerPaper = document.getElementById("player-paper");
 playerPaper.addEventListener("click", function() {
+  document.getElementById("enemy-status").style.animationPlayState = "paused";
+  document.getElementById("player-status").style.animationPlayState = "paused";
   opponentHandReturn();
   playerChoice = "paper";
   result = winorlose(playerChoice, opponentChoice);
@@ -49,6 +53,8 @@ playerPaper.addEventListener("click", function() {
 });
 let playerScissors = document.getElementById("player-scissors");
 playerScissors.addEventListener("click", function() {
+  document.getElementById("enemy-status").style.animationPlayState = "paused";
+  document.getElementById("player-status").style.animationPlayState = "paused";
   opponentHandReturn();
   playerChoice = "scissors";
   result = winorlose(playerChoice, opponentChoice);
@@ -115,12 +121,26 @@ function healthCalc(result) {
     case "win":
       enemyHealth.innerHTML -= 10;
       enemyTimesHit++;
-      document.getElementById("enemy-floating-health").style.width = (400 - (enemyTimesHit*40)) + "px";
+      document.getElementById("enemy-floating-health").style.width =
+        400 - enemyTimesHit * 40 + "px";
+      document.getElementById("enemy-status").style.animationPlayState =
+        "running";
+      setTimeout(() => {
+        document.getElementById("enemy-status").style.animationPlayState =
+          "paused";
+      }, 500);
       break;
     case "lose":
       playerHealth.innerHTML -= 10;
       playerTimesHit++;
-      document.getElementById("player-floating-health").style.width = (400 - (playerTimesHit*40)) + "px";
+      document.getElementById("player-floating-health").style.width =
+        400 - playerTimesHit * 40 + "px";
+        document.getElementById("player-status").style.animationPlayState =
+        "running";
+      setTimeout(() => {
+        document.getElementById("player-status").style.animationPlayState =
+          "paused";
+      }, 500);
       break;
     default:
       break;
