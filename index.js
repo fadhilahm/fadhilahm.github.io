@@ -135,7 +135,7 @@ function healthCalc(result) {
       playerTimesHit++;
       document.getElementById("player-floating-health").style.width =
         400 - playerTimesHit * 40 + "px";
-        document.getElementById("player-status").style.animationPlayState =
+      document.getElementById("player-status").style.animationPlayState =
         "running";
       setTimeout(() => {
         document.getElementById("player-status").style.animationPlayState =
@@ -222,5 +222,14 @@ function hurt() {
         playerHit.style.visibility = "hidden";
       }, 250);
       break;
+    case "draw":
+      document.getElementById("player-shield").style.visibility = "visible";
+      setTimeout(() => {
+        document.getElementById("player-shield").style.visibility = "hidden";
+      }, 250);
+      document.getElementById("enemy-shield").style.visibility = "visible";
+      setTimeout(() => {
+        document.getElementById("enemy-shield").style.visibility = "hidden";
+      }, 250);
   }
 }

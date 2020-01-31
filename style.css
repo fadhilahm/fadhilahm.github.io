@@ -127,6 +127,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #enemy-health {
@@ -170,6 +171,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #player-health {
@@ -224,6 +226,28 @@ body {
   justify-content: center;
   font-size: 70px;
   border: yellow solid 10px;
+}
+
+#player-shield {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  background-image: url(./Assets/shield.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  visibility: hidden;
+}
+
+#enemy-shield {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  background-image: url(./Assets/shield.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  visibility: hidden;
 }
 
 /* keyframe for hit effect */
