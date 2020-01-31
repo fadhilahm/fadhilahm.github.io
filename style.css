@@ -40,13 +40,6 @@ body {
   justify-content: space-evenly;
 }
 
-.versus {
-  background-color: black;
-  height: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .card {
   padding: 10px;
@@ -60,9 +53,19 @@ body {
   /* size is 480 x 750 */
 }
 
+.card:hover {
+  transform: scale(1.2);
+  border:red solid 20px;
+}
+
 .versus {
   font-size: 75px;
   color: white;
+  background-color: black;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .enemy #rock {
@@ -77,15 +80,15 @@ body {
   background-image: url(./Assets/enemyScissors.jpg);
 }
 
-.player #rock {
+#player-rock {
   background-image: url(./Assets/playerRock.jpg);
 }
 
-.player #paper {
+#player-paper {
   background-image: url(./Assets/playerPaper.jpg);
 }
 
-.player #scissors {
+#player-scissors {
   background-image: url(./Assets/playerScissors.jpg);
 }
 
