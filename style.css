@@ -53,9 +53,9 @@ body {
   /* size is 480 x 750 */
 }
 
-.card:hover {
+.player .card:hover {
   transform: scale(1.2);
-  border:red solid 20px;
+  border: yellow solid 20px;
 }
 
 .versus {
@@ -68,15 +68,15 @@ body {
   justify-content: center;
 }
 
-.enemy #rock {
+#enemy-rock {
   background-image: url(./Assets/enemyRock.jpg);
 }
 
-.enemy #paper {
+#enemy-paper {
   background-image: url(./Assets/enemyPaper.jpg);
 }
 
-.enemy #scissors {
+#enemy-scissors {
   background-image: url(./Assets/enemyScissors.jpg);
 }
 
@@ -119,6 +119,9 @@ body {
   background-repeat: no-repeat;
   background-color: white;
   height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #enemy-health {
@@ -146,6 +149,9 @@ body {
   background-repeat: no-repeat;
   background-color: white;
   height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #player-health {
@@ -165,4 +171,26 @@ body {
   justify-content: center;
   font-size: 75px;
   font-weight: 700;
+}
+
+#enemy-hit{
+  background-color: red;
+  height: 40%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  border: yellow solid 10px;
+}
+
+#player-hit{
+  background-color: red;
+  height: 40%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  border: yellow solid 10px;
 }
